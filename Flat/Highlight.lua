@@ -129,6 +129,9 @@ function flat.console.clear() end
 ---@field silent boolean
 flat.error = {}
 
+--@param message string
+function flat.error.raise(message) end
+
 ---@class flat.explorer
 ---@field location string
 flat.explorer = {}
@@ -183,6 +186,7 @@ function flat.stopwatch:reset() end
 
 ---@class flat.timer
 ---@field remaining number
+---@field progress number
 ---@field delay number
 flat.timer = {}
 
@@ -290,12 +294,6 @@ flat.network = {}
 ---@param reciever function
 ---@return integer
 function flat.network.deploy(port, reciever) end
-
----@param host string
----@param path string
----@param request string
----@return string
-function flat.network.request(host, path, request) end
 
 ---@param host string
 ---@param port integer
